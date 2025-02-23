@@ -10,9 +10,9 @@ import (
 )
 
 type CreateStoryReq struct {
-	Title  string `json:"title"`
-	Riddle string `json:"riddle"`
-	Answer string `json:"answer"`
+	Title     string `json:"title"`
+	Riddle    string `json:"riddle"`
+	FullStory string `json:"full_story"`
 }
 
 func CreateStoryController(c *gin.Context) {
@@ -34,7 +34,7 @@ func CreateStoryController(c *gin.Context) {
 		return
 	}
 
-	story, err := service.CreateStory(req.Title, req.Riddle, req.Answer, userClaims.Name)
+	story, err := service.CreateStory(req.Title, req.Riddle, req.FullStory, userClaims.Name)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, StandardResp{Code: -1, Message: err.Error()})
 		return

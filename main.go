@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/DeveloperGerald/TurtleSoup/config"
+	deepseek "github.com/DeveloperGerald/TurtleSoup/pkg/deep_seek"
 	"github.com/DeveloperGerald/TurtleSoup/repository"
 	"github.com/DeveloperGerald/TurtleSoup/router"
 
@@ -13,6 +14,7 @@ import (
 func main() {
 	config.Init()
 	repository.Init()
+	deepseek.Init()
 
 	// 创建一个默认的 Gin 路由引擎
 	r := gin.Default()

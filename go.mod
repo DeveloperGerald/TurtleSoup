@@ -10,6 +10,13 @@ require (
 require github.com/google/uuid v1.6.0
 
 require (
+	github.com/gin-contrib/cors v1.7.3 // indirect
+	github.com/moul/http2curl v1.0.0 // indirect
+	github.com/parnurzeal/gorequest v0.3.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+)
+
+require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/bytedance/sonic v1.12.8 // indirect
 	github.com/bytedance/sonic/loader v0.2.3 // indirect

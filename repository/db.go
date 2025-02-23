@@ -2,6 +2,7 @@ package repository
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/DeveloperGerald/TurtleSoup/config"
 	"github.com/jinzhu/gorm"
@@ -19,4 +20,6 @@ func Init() {
 	if err != nil {
 		panic(fmt.Errorf("init database error: %v", err))
 	}
+
+	log.Println("database connected")
 }

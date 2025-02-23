@@ -10,6 +10,7 @@ import (
 type Config struct {
 	Server   ServerConfig   `yaml:"server"`
 	Database DatabaseConfig `yaml:"database"`
+	Deepseek DeepseekConfig `yaml:"deepseek"`
 }
 
 type ServerConfig struct {
@@ -22,6 +23,11 @@ type DatabaseConfig struct {
 	Host     string `yaml:"host"`
 	Port     string `yaml:"port"`
 	Database string `yaml:"database"`
+}
+
+type DeepseekConfig struct {
+	SecretKey string `yaml:"secret_key"`
+	Domain    string `yaml:"domain"`
 }
 
 var config *Config
